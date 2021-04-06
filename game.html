@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GAME OF SET</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>THE GAME OF SET</h1>
+    <div id="extras-container">
+      <ul class="navbar">
+        <li><a class="active" id="tutorial-button">Tutorial</a>
+        <li id="hint"><button id="hint-button">Hint</button></li>
+        <li id="request"><button id="request-cards-button">Request More Cards</button></li>
+      </ul>
+    </div>
+    <div id="main-container">
+      <div id="cards-container"></div>
+
+      <div id="score-container">
+        <h3>SCORE BOARD</h3>
+
+        <div class="container">
+          <input
+            id="player-input"
+            type="text"
+            placeholder="Enter a Player Name"
+          /><button id="add-player">ADD</button>
+          <div id="player-list"></div>
+      </div>
+    </div>
+    <div class="modal" id="valid-set-modal">
+      <div class="modal-box">
+        <span class="close">X</span>
+        <p class="modal-text">Congratulations, SET Found!</p>
+      </div>
+    </div>
+    <div class="modal" id="invalid-set-modal">
+      <div class="modal-box">
+        <span class="close">X</span>
+        <p class="modal-text">Sorry, not a valid SET!</p>
+      </div>
+    </div>
+    <div class="modal" id="incorrect-number-modal">
+      <div class="modal-box">
+        <span class="close">X</span>
+        <p class="modal-text">Please select 3 cards for submission.</p>
+      </div>
+    </div>
+    <div class="modal" id="set-in-play-modal">
+      <div class="modal-box">
+        <span class="close">X</span>
+        <p class="modal-text">There is already a SET in play! Use the 'Hint' button for extra help!</p>
+      </div>
+    </div>
+    <div class="modal" id="game-over-modal">
+      <div class="modal-box">
+        <span class="close">X</span>
+        <p class="modal-text">Game Over! Start a new game by...</p>
+      </div>
+    </div>
+    <div class="modal" id="no-sets-modal">
+      <div class="modal-box">
+        <span class="close">X</span>
+        <p class="modal-text">There are no sets in play, please 'Request More Cards'!</p>
+      </div>
+    </div>
+    <div class="modal" id="too-many-players-modal">
+      <div class="modal-box">
+        <span class="close">X</span>
+        <p class="modal-text">You can only play with 6 players at a time!</p>
+      </div>
+    </div>
+    <div class="modal" id="tutorial-modal">
+      <div class="modal-box">
+        <span class="close">X</span>
+        <div id="tutorial-container">
+          <div class="game-instructions">
+            <h3>How To Play</h3>
+            <ul>
+              <li>Enter a player's Name and Click <b>ADD</b> button</li>
+              <li>A BUTTON with the player's name will appear and their score next to</li>
+              <li>Add all the players that wish to play.</li>
+              <li>Pick 3 cards and click on your button if you find a set</li>
+              <li>If none of the players can find a set and you are confident there isn't any, you can add more card using the <b>Request more cards</b> button</li>
+              <li>If none of the players can find a set, ask for a hint using the <b>HINT</b> button</li>
+  
+            </ul>
+            </div>
+          <div class="game-instructions">
+            <h3>Game of set rules</h3>
+            <p>The goal of Set is to pick out a set of 3 cards from the 12 cards set on the table. Each card has four characteristics: <b> shape, color, number, and shading</b>. A Set contains 3 cards in which either they all share a similar feature or have no features in common. So, a set may consist of 3 cards of the same shape, color, shading, or number of shapes. Or, they may have all those features different.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
